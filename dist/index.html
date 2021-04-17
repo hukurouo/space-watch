@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="main.js"></script>
+  <style>
+    body {
+        background-color: #494646;
+      }
+    
+    .square{
+  background-color: #5f78e7;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+} 
+.earth{
+  display: flex; /* 子要素をflexboxで揃える */
+    flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
+    justify-content: center; /* 子要素をflexboxにより中央に配置する */
+    align-items: center;  /* 子要素をflexboxにより中央に配置する */
+
+}
+#area {
+    position: relative;
+    width: 900px;
+    height: 900px;
+    margin: 50px auto;
+}
+#round {
+    width: 900px;
+    height: 900px;
+    box-sizing: border-box;
+    border: #000000 2px solid;
+    border-radius: 450px;
+}
+#circle {
+    position: absolute;
+    top: 440px;
+    left: 440px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: #6c88d3;
+}
+
+.c-clock {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border: 1px solid #333;
+  border-radius: 50%;
+}
+.c-clock__hour {
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 5px);
+  width: 10px;
+  height: 150px;
+  background: #333;
+  transform-origin: bottom;
+}
+.c-clock__min {
+  position: absolute;
+  top: calc(50% - 180px);
+  left: calc(50% - 2px);
+  width: 4px;
+  height: 180px;
+  background: #333;
+  transform-origin: bottom;
+}
+.c-clock__sec {
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 1px);
+  width: 5px;
+  height: 200px;
+  background: #494646;
+  transform-origin: bottom;
+  border-top: rgb(104, 162, 201) 5px solid;;
+}
+.c-clock__12 {
+  position: absolute;
+  top: 10px;
+  left: calc(50%);
+  transform: translateX(-50%);
+  font-size: 18px;
+}
+.c-clock__3 {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+.c-clock__6 {
+  position: absolute;
+  bottom: 10px;
+  left: calc(50%);
+  transform: translateX(-50%);
+  font-size: 18px;
+}
+.c-clock__9 {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="earth">
+    <div>earth watch</div>
+
+
+  <div class="c-clock">
+    <span class="c-clock__hour"></span> <!-- 時計 -->
+    <span class="c-clock__min"></span> <!-- 分針 -->
+    <span class="c-clock__sec"></span> <!-- 秒針 -->
+    <span class="c-clock__12">12</span> <!-- 時計文字 -->
+    <span class="c-clock__3">3</span> <!-- 時計文字 -->
+    <span class="c-clock__6">6</span> <!-- 時計文字 -->
+    <span class="c-clock__9">9</span> <!-- 時計文字 -->
+  </div>
+</div>
+</body>
+</html>
