@@ -7,7 +7,7 @@
     <script defer src="main.js"></script>
     <style>
       body {
-        background-color: #302e2e;
+        background-color: #242323;
       }
 
       .earth {
@@ -17,83 +17,69 @@
         align-items: center; /* 子要素をflexboxにより中央に配置する */
         height: 70vh;
       }
-      #area {
-        position: relative;
-        width: 900px;
-        height: 900px;
-        margin: auto;
-      }
-      #round {
-        width: 900px;
-        height: 900px;
-        box-sizing: border-box;
-        border: #000000 2px solid;
-        border-radius: 450px;
-      }
-      #circle {
-        position: absolute;
-        top: 440px;
-        left: 440px;
-        width: 10px;
-        height: 10px;
-        border-radius: 10px;
-        background: #6c88d3;
+
+      .title {
+        
+        margin-bottom: 30px;
+        color: rgb(198, 229, 243);
+        text-align: center;
+        padding-top: 50px;
       }
 
       .c-clock {
         position: absolute;
-        width: 400px;
-        height: 400px;
-        border: 1px solid #333;
+        width: 350px;
+        height: 350px;
+        border: 1px solid rgb(78, 78, 78);
         border-radius: 50%;
       }
       .c-clock2 {
         position: absolute;
         margin-left: 25px;
         margin-top: 25px;
-        width: 350px;
-        height: 350px;
-        border: 1px solid #333;
+        width: 300px;
+        height: 300px;
+        border: 1px solid rgb(78, 78, 78);
         border-radius: 50%;
       }
       .c-clock3 {
         position: absolute;
         margin-left: 50px;
         margin-top: 50px;
-        width: 300px;
-        height: 300px;
-        border: 1px solid #333;
+        width: 250px;
+        height: 250px;
+        border: 1px solid rgb(78, 78, 78);
         border-radius: 50%;
       }
       .c-clock__hour {
+        position: absolute;
+        top: calc(50% - 127px);
+        left: calc(50% - 2.5px);
+        width: 5px;
+        height: 122px;
+        background: #242323;
+        transform-origin: bottom;
+        border-top: rgb(199, 242, 243) 5px solid;
+      }
+      .c-clock__min {
         position: absolute;
         top: calc(50% - 153px);
         left: calc(50% - 2.5px);
         width: 5px;
         height: 148px;
-        background: #302e2e;
-        transform-origin: bottom;
-        border-top: rgb(169, 234, 236) 5px solid;
-      }
-      .c-clock__min {
-        position: absolute;
-        top: calc(50% - 178px);
-        left: calc(50% - 2.5px);
-        width: 5px;
-        height: 173px;
-        background: #302e2e;
+        background: #242323;
         transform-origin: bottom;
         border-top: rgb(170, 166, 128) 5px solid;
       }
       .c-clock__sec {
         position: absolute;
-        top: calc(50% - 203px);
+        top: calc(50% - 178px);
         left: calc(50% - 2.5px);
         width: 5px;
-        height: 198px;
-        background: #302e2e;
+        height: 173px;
+        background: #242323;
         transform-origin: bottom;
-        border-top: rgb(39, 84, 114) 5px solid;
+        border-top: rgb(125, 185, 224) 5px solid;
       }
 
       .sun {
@@ -106,27 +92,106 @@
         background-color: rgb(245, 99, 80);
       }
 
+      .watch {
+        color:rgb(198, 229, 243);
+        position: absolute;
+        top: calc(50% + 35px);
+        left: calc(50% - 37.5px);
+      }
+
+      .day {
+        color:rgb(198, 229, 243);
+        position: absolute;
+        top: calc(50% - 55px);
+        left: calc(50% - 24px);
+      }
+
+      @media screen and (min-width: 768px) {
+        .earth {
+        display: flex; /* 子要素をflexboxで揃える */
+        flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
+        justify-content: center; /* 子要素をflexboxにより中央に配置する */
+        align-items: center; /* 子要素をflexboxにより中央に配置する */
+        height: 80vh;
+      }
+
       .title {
+        
         margin-bottom: 30px;
-        color: whitesmoke;
+        color: rgb(198, 229, 243);
         text-align: center;
         padding-top: 50px;
+      }
+        .c-clock {
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        border: 1px solid rgb(78, 78, 78);
+        border-radius: 50%;
+      }
+      .c-clock2 {
+        position: absolute;
+        margin-left: 50px;
+        margin-top: 50px;
+        width: 600px;
+        height: 600px;
+        border: 1px solid rgb(78, 78, 78);
+        border-radius: 50%;
+      }
+      .c-clock3 {
+        position: absolute;
+        margin-left: 100px;
+        margin-top: 100px;
+        width: 500px;
+        height: 500px;
+        border: 1px solid rgb(78, 78, 78);
+        border-radius: 50%;
+      }
+      .c-clock__hour {
+        position: absolute;
+        top: calc(50% - 251px);
+        left: calc(50% - 2.5px);
+        width: 5px;
+        height: 246px;
+        background: #242323;
+        transform-origin: bottom;
+        border-top: rgb(199, 242, 243) 5px solid;
+      }
+      .c-clock__min {
+        position: absolute;
+        top: calc(50% - 304px);
+        left: calc(50% - 2.5px);
+        width: 5px;
+        height: 299px;
+        background: #242323;
+        transform-origin: bottom;
+        border-top: rgb(170, 166, 128) 5px solid;
+      }
+      .c-clock__sec {
+        position: absolute;
+        top: calc(50% - 353px);
+        left: calc(50% - 2.5px);
+        width: 5px;
+        height: 348px;
+        background: #242323;
+        transform-origin: bottom;
+        border-top: rgb(125, 185, 224) 5px solid;
+      }
       }
     </style>
   </head>
   <body>
-    <div class="title">space watch</div>
+    <div class="title">space clock</div>
     <div class="earth">
       <div class="c-clock">
+        <span class="c-clock__sec"></span>
         <div class="c-clock2"></div>
+        <span class="c-clock__min"></span>
         <div class="c-clock3"></div>
         <span class="c-clock__hour"></span>
-        <!-- 時計 -->
-        <span class="c-clock__min"></span>
-        <!-- 分針 -->
-        <span class="c-clock__sec"></span>
-        <!-- 秒針 -->
         <span class="sun"></span>
+        <span class="watch"></span>
+        <span class="day"></span>
       </div>
     </div>
   </body>
