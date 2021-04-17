@@ -2,9 +2,11 @@
 setInterval(() => {
   // 現在時間の取得
   const now = new Date();
-  const h = now.getHours();
-  const m = now.getMinutes();
   const s = now.getSeconds() + now.getMilliseconds()/1000;
+  
+  const m = now.getMinutes() + s/60;
+  const h = now.getHours();
+  
 
   // 時、分、秒を元に角度を計算
   const degH = h * (360 / 12) + m * (360 / 12 / 60);
